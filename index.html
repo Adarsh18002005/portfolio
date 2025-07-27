@@ -4,62 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adarsh Anand | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981; /* emerald */
+      --secondary: #1e293b; /* slate */
+      --accent: #facc15; /* yellow */
+      --bg: #0f172a; /* dark */
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--secondary);
+      padding: 2rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+    nav {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      background-color: var(--secondary);
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .box {
+      background-color: var(--secondary);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .about p,
+    .contact p {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .skills span {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: inset 0 0 0 2px var(--primary);
+    }
+    .project h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .project a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    .project a:hover {
+      background-color: #059669;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary);
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="navbar">
-      <h1>Adarsh Anand</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1>Adarsh Anand</h1>
+    <p>3rd Year B.Tech CSE Student @ VIT Vellore</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a B.Tech CSE student at VIT Vellore, passionate about software development,
-        machine learning, and real-world problem solving. I am actively seeking internship
-        opportunities to gain hands-on industry experience and contribute to impactful projects.
-      </p>
-    </section>
+  <section id="about" class="box about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Adarsh Anand, a passionate Computer Science student at VIT Vellore. I love coding, solving problems, and building smart solutions using Machine Learning and clean code practices. I enjoy working with real-world datasets, optimizing performance, and writing readable, scalable code.</p>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, C++, Java, JavaScript</li>
-        <li><strong>Technologies:</strong> Git, GitHub, HTML, CSS, VS Code</li>
-        <li><strong>Machine Learning:</strong> Scikit-learn, Pandas, NumPy, Matplotlib</li>
-        <li><strong>Core Concepts:</strong> Data Structures, OOP, Problem Solving</li>
-      </ul>
-    </section>
+  <section id="skills" class="box">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>C / C++</span>
+      <span>Data Structures & Algorithms</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>HTML / CSS</span>
+      <span>Git & GitHub</span>
+      <span>Problem Solving</span>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>Flight Delay Detection</h3>
-        <p>
-          A machine learning project to predict flight delays based on historical data.
-          The model helps improve scheduling efficiency and traveler satisfaction.
-        </p>
-        <a href="#">View Project</a>
-      </div>
-    </section>
+  <section id="projects" class="box">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Flight Delay Detection Using Machine Learning</h3>
+      <p>A machine learning project to detect and predict flight delays using data-driven insights. The model helps forecast potential delays based on key flight data, enhancing travel planning and efficiency.</p>
+      <a href="https://github.com/Adarsh18002005/Flight_Delay_Detection" target="_blank">View on GitHub</a>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:adarsh.anand2023@vitstudent.ac.in">adarsh.anand2023@vitstudent.ac.in</a></p>
-    </section>
-  </main>
+  <section id="contact" class="box contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:adarsh.anand2023@vitstudent.ac.in">adarsh.anand2023@vitstudent.ac.in</a></p>
+    <p>GitHub: <a href="https://github.com/Adarsh18002005" target="_blank">Adarsh18002005</a></p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Adarsh Anand. All rights reserved.</p>
+    <p>©️ 2025 Adarsh Anand. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
